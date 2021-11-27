@@ -308,7 +308,8 @@ iface eth0 inet static
 ### Routing (baru dikerjakan setelah demo revisi)
 - **Foosha**
 ```
-route add -net 10.12.12.244 netmask 255.255.255.252 gw 10.12.31.242
+route add -net 10.12.12.0 netmask 255.255.252.0 gw 10.12.31.242
+route add -net 10.12.31.244 netmask 255.255.255.252 gw 10.12.31.242
 route add -net 10.12.0.0 netmask 255.255.248.0 gw 10.12.31.242
 route add -net 10.12.31.0 netmask 255.255.255.128 gw 10.12.31.242
 route add -net 10.12.16.0 netmask 255.255.252.0 gw 10.12.31.250
@@ -317,17 +318,38 @@ route add -net 10.12.31.224 netmask 255.255.255.240 gw 10.12.31.250
 route add -net 10.12.31.252 netmask 255.255.255.252 gw 10.12.31.250
 route add -net 10.12.30.0 netmask 255.255.255.0 gw 10.12.31.250
 route add -net 10.12.20.0 netmask 255.255.252.0 gw 10.12.31.250
+route add -net 177.13.169.109 netmask 255.255.255.252 gw 10.12.31.250
 ```
 - **Water7**
 ```
-
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.12.8.1
+route add -net 10.12.0.0 netmask 255.255.248.0 gw 10.12.31.246
+route add -net 10.12.31.0 netmask 255.255.255.128 gw 10.12.31.246
+```
+- Pucci
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.12.31.245
 ```
 - **Guanhao**
 ```
-
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.12.31.249
+route add -net 10.12.31.224 netmask 255.255.255.240 gw 10.12.28.2
+route add -net 10.12.30.0 netmask 255.255.255.0 gw 10.12.31.254
+route add -net 10.12.20.0 netmask 255.255.252.0 gw 10.12.31.254
+route add -net 177.13.169.109 netmask 255.255.255.252 gw 10.12.31.254
+```
+- Alabasta
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.12.28.1
 ```
 - **Oimo**
 ```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.12.31.253
+route add -net 10.12.20.0 netmask 255.255.252.0 gw 10.12.30.3
+```
+- **Seastone**
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.12.30.1
 ```
 
 ## CIDR pada CPT
