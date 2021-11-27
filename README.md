@@ -59,6 +59,267 @@ Berikut pembagian IP dan Netmask untuk setiap subnet.
 | A12 | 10.12.30.0 | 255.255.255.0 |
 | A13 | 10.12.20.0 | 255.255.252.0 |
 
+### Langkah 3
+Konfigurasi pada GNS3
+#### Router
+- **Foosha**
+```
+# NAT
+auto eth0
+iface eth0 inet dhcp
+
+# A1 - Blueno
+auto eth1
+iface eth1 inet static
+	address 10.12.8.1
+	netmask 255.255.252.0
+
+# A2 - Water7
+auto eth2
+iface eth2 inet static
+	address 10.12.31.241
+	netmask 255.255.255.252
+
+# Server
+auto eth3
+iface eth3 inet static
+	address 177.13.169.105
+	netmask 255.255.255.252
+
+# A7 - Guanhao
+auto eth4
+iface eth4 inet static
+	address 10.12.31.249
+	netmask 255.255.255.252
+```
+- **Water7**
+```
+# A2 - Foosha
+auto eth0
+iface eth0 inet static
+	address 10.12.31.242
+	netmask 255.255.255.252
+    gateway 10.12.31.241
+
+# A3 - Cipher
+auto eth1
+iface eth1 inet static
+	address 10.12.12.1
+	netmask 255.255.252.0
+
+# A4 - Pucci
+auto eth2
+iface eth2 inet static
+	address 10.12.31.245
+	netmask 255.255.255.252
+```
+- **Pucci**
+```
+# A4 - Water7
+auto eth0
+iface eth0 inet static
+	address 10.12.31.246
+	netmask 255.255.255.252
+    gateway 10.12.31.245
+
+# A5 - Courtyard/Calmbelt
+auto eth1
+iface eth1 inet static
+	address 10.12.0.1
+	netmask 255.255.248.0
+
+# A6 - Jipangu
+auto eth2
+iface eth2 inet static
+	address 10.12.31.1	
+	netmask 255.255.255.128
+```
+- **Guanhao**
+```
+# A7 - Foosha
+auto eth0
+iface eth0 inet static
+	address 10.12.31.250
+	netmask 255.255.255.252
+    gateway 10.12.31.249
+
+# A8 - Jabra
+auto eth1
+iface eth1 inet static
+	address 10.12.16.1
+	netmask 255.255.252.0
+
+# A9 - Alabasta/Maingate
+auto eth2
+iface eth2 inet static
+	address 10.12.28.1
+	netmask 255.255.254.0
+
+# A11 - Oimo
+auto eth3
+iface eth3 inet static
+	address 10.12.31.253
+	netmask 255.255.255.252
+```
+- **Alabasta**
+```
+# A9 - Guanhao
+auto eth0
+iface eth0 inet static
+	address 10.12.28.2
+	netmask 255.255.254.0
+    gateway 10.12.28.1
+
+# A10 - Jorge
+auto eth1
+iface eth1 inet static
+	address 10.12.31.225
+	netmask 255.255.255.240
+```
+- **Oimo**
+```
+# A11 - Guanhao
+auto eth0
+iface eth0 inet static
+	address 10.12.31.254
+	netmask 255.255.255.252
+    gateway 10.12.31.253
+
+# A12 - Seastone/Enies
+auto eth1
+iface eth1 inet static
+    address 10.12.30.1
+	netmask 255.255.255.0
+
+# Server
+auto eth2
+iface eth2 inet static
+    address 177.13.169.109
+    netmask 255.255.255.252
+```
+- **Seastone**
+```
+# A12 - Oimo
+auto eth0
+iface eth0 inet static
+    address 10.12.30.3
+    netmask 255.255.255.0
+    gateway 10.12.30.1
+
+# A13 - Elena
+auto eth1
+iface eth1 inet static
+    address 10.12.20.1
+    netmask 255.255.252.0
+```
+#### Client
+- **Blueno**
+```
+# A1 - Foosha
+auto eth0
+iface eth0 inet static
+	address 10.12.8.2
+	netmask 255.255.252.0
+    gateway 10.12.8.1
+```
+- **Cipher**
+```
+# A3 - Water7
+auto eth0
+iface eth0 inet static
+    address 10.12.12.2
+    netmask 255.255.252.0
+    gateway 10.12.12.1
+```
+- **Courtyard**
+```
+# A5 - Pucci
+auto eth0
+iface eth0 inet static
+    address 10.12.0.2
+	netmask 255.255.248.0
+    gateway 10.12.0.1
+```
+- **Calmbelt**
+```
+# A5 - Pucci
+auto eth0
+iface eth0 inet static
+    address 10.12.0.3
+	netmask 255.255.248.0
+    gateway 10.12.0.1
+```
+- **Jipangu**
+```
+# A6 - Pucci
+auto eth0
+iface eth0 inet static
+	address 10.12.31.2	
+	netmask 255.255.255.128
+    gateway 10.12.31.1
+```
+- **Jorge**
+```
+#A10 - Alabasta
+auto eth0
+iface eth0 inet static
+    address 10.12.31.226
+    netmask 255.255.255.240
+    gateway 10.12.31.225
+```
+- **Jabra**
+```
+# A8 - Guanhao
+auto eth0
+iface eth0 inet static
+    address 10.12.16.2
+    netmask 255.255.252.0
+    gateway 10.12.16.1
+```
+- **Maingate**
+```
+# A9 - Guanhao
+auto eth0
+iface eth0 inet static
+    address 10.12.28.3
+    netmask 255.255.254.0
+    gateway 10.12.28.1
+```
+- **EniesLobby**
+```
+# A12 - Oimo
+auto eth0
+iface eth0 inet static
+    address 10.12.30.2
+    netmask 255.255.255.0
+    gateway 10.12.30.1
+```
+- **Elena**
+```
+# A13 - Seastone
+auto eth0
+iface eth0 inet static
+    address 10.12.20.2
+    netmask 255.255.252.0
+    gateway 10.12.20.1
+```
+### Routing
+- **Foosha**
+```
+
+```
+- **Water7**
+```
+
+```
+- **Guanhao**
+```
+
+```
+- **Oimo**
+```
+```
+
 ## CIDR pada CPT
 Berikut langkah kami dalam menyusun susunan netmask dalam CIDR:
 
