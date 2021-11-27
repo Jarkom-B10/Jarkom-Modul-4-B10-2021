@@ -305,10 +305,18 @@ iface eth0 inet static
     netmask 255.255.252.0
     gateway 10.12.20.1
 ```
-### Routing
+### Routing (baru dikerjakan setelah demo revisi)
 - **Foosha**
 ```
-
+route add -net 10.12.12.244 netmask 255.255.255.252 gw 10.12.31.242
+route add -net 10.12.0.0 netmask 255.255.248.0 gw 10.12.31.242
+route add -net 10.12.31.0 netmask 255.255.255.128 gw 10.12.31.242
+route add -net 10.12.16.0 netmask 255.255.252.0 gw 10.12.31.250
+route add -net 10.12.16.0 netmask 255.255.254.0 gw 10.12.31.250
+route add -net 10.12.31.224 netmask 255.255.255.240 gw 10.12.31.250
+route add -net 10.12.31.252 netmask 255.255.255.252 gw 10.12.31.250
+route add -net 10.12.30.0 netmask 255.255.255.0 gw 10.12.31.250
+route add -net 10.12.20.0 netmask 255.255.252.0 gw 10.12.31.250
 ```
 - **Water7**
 ```
