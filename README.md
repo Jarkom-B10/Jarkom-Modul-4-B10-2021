@@ -15,6 +15,8 @@ Frans Wijaya | 05111940000098 | VLSM GNS3
   * [VLSM pada GNS3](#vlsm-pada-gns3)
     + [Langkah 1](#langkah-1)
     + [Langkah 2](#langkah-2)
+    + [Langkah 3](#langkah-3)
+    + [Routing](#routing)
   * [CIDR pada CPT](#cidr-pada-cpt)
     + [Langkah 1](#langkah-1-1)
     + [Langkah 2](#langkah-2-1)
