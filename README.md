@@ -12,5 +12,21 @@ Jumlah IP | 1001 | 2 | 701 | 2 | 2021 | 101 | 2 | 521 | 502 | 13 | 2 | 252 | 721
 Netmask | /22 | /30 | /22 | /30 | /21 | /25 | /30 | /22 | /23 | /28 | /30 | /24 | /22 | /19
 ### Langkah 2
 Membuat VLSM Tree.
-
 ![VLSM Tree](/assets/vlsm/VLSM_Tree.png)
+Berikut pembagian IP dan Netmask untuk setiap subnet.
+
+| Subnet | Network IP | Netmask |
+| --- | --- | --- |
+| A1 |  |  |
+| A2 |  |  |
+| A3 |  |  |
+| A4 |  |  |
+| A5 |  |  |
+| A6 |  |  |
+| A7 |  |  |
+| A8 |  |  |
+| A9 |  |  |
+| A10 |  |  |
+| A11 |  |  |
+| A12 |  |  |
+| A13 |  |  |
